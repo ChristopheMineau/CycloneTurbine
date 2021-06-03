@@ -1,0 +1,64 @@
+Carte de commande
+=================
+Arduino Nano (Atmega328p OLD BOOTLOADER !! )
+
+Connecteur logique :
+de gauche à droite 
+In 5V
+In GND
+Out A3 : trigger TRIAC moteur via optocoupleur
+Out D5 : vers commande relais power
+In D2  : Zero cross detection
+In D3  : Tacho pulse
+In A6  : Remplissage Bidon (active Low)
+
+Connections internes :
+LED OK : D12
+LED Defaut : D11
+LED Bidon plein : D10
+Entrée Analogique Potar Vitesse : A2
+Bouton Vitesse : D6 (INPUT_PULLUP)
+LED V1 : D9
+LED V2 : D8
+LED V3 : D7
+Bouton Reset : reset
+Entrée Infra Rouge Telecommande : D4
+Bouton STOP : A4 (INPUT_PULLUP)
+Bouton START: A5 (INPUT_PULLUP)
+
+
+
+Carte de puissance moteur
+=========================
+connexions puissance :
+IN AC 220 L
+In AC 220 N
+OUT Motor Phase 1
+OUT Motor Phase 2
+Domino de raccordement Tachymètre phase 1
+Domino de raccordement Tachymètre phase 2
+
+Logique connecteur 1:
+de gauche à droite :
+In 5V
+In D5 : vers commande relais power
+Out D2 : Zero cross detection
+In A3 : trigger TRIAC moteur via optocoupleur
+In GND
+
+Logique connecteur 2:
+de gauche à droite :
+Out D5 : Commande module relais / coupure 220V
+Out 5V
+Out GND
+
+
+Carte tachymètre
+================
+In T : vers Domino de raccordement Tachymètre phase 1
+In T : vers Domino de raccordement Tachymètre phase 2
+Logique connecteur :
+de gauche à droite :
+Out D3
+In 5V
+In GND
