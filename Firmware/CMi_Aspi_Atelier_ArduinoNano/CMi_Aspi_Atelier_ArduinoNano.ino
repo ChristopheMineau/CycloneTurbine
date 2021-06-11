@@ -1,6 +1,8 @@
-#define VERSION_CMI_ASPI_ATELIER "7.1"
+#define VERSION_CMI_ASPI_ATELIER "7.2"
 #include <avr/io.h>
 #include <avr/interrupt.h>
+
+
 #include <PID_v1.h>
 #include <util/atomic.h>
 
@@ -22,13 +24,13 @@ unsigned long lastpiddelay = 0;
 const int sampleRate = 1;           // Variable that determines how fast our PID loop
 const int rpmcorrection = 86;       // this requires that the actual rpm correspond to the measured ones
 const int lcdinterval = 2000;       // lcd refresh interval in milliseconds
-const int protection = 2000;        // protection will switch on when real rpm exceeds desired by value
+const int protection = 3000;        // protection will switch on when real rpm exceeds desired by value
 const int debounceDelay = 50;       // the debounce time; increase if the output flickers
 const int minoutputlimit = 80;      // limit of PID output
 const int maxoutputlimit = 540;     // limit of PID output
 const int mindimminglimit = 80;     // the shortest delay before triac fires
 const int maxdimminglimit = 625;    // for 60Hz will be 520
-const int  risetime = 1000;   //100  // RPM rise time delay in microseconds ( x RPM) (takes 5s to reach 1000rpm) 
+const int  risetime = 1500;   //100  // RPM rise time delay in microseconds ( x RPM) (takes 5s to reach 1000rpm) 
 
 int dimming = 540;                   // this should be the same as maxoutputlimit
 int desiredRPM = 0;
@@ -255,7 +257,7 @@ void setSoftStartInitialSpeed() {
 // Error Handlers
 void stuckError() {   // The tachometer reports no rotation despite the desired motor status which is ON
   DEBUG_PRINTLN("### Stuck Error. No Tachometer signal detected...");
-  motorStatus.setMotorDefault();
+  motorStatus.setMotorDefault();  // Led permanently set
   while (1) {                  // Dead end ...
     motorStatus.defaultLed.update();
     motorStatus.canFullLed.update();
@@ -265,7 +267,7 @@ void stuckError() {   // The tachometer reports no rotation despite the desired 
 
 void exceedError() {
   DEBUG_PRINTLN("### Speed Exceeded Error. Maybe the Triac is damaged...");
-  motorStatus.setMotorDefault(true);
+  motorStatus.setMotorDefault(true);  // Led blinking
   while (1) {                  // Dead end ...
     motorStatus.defaultLed.update();
     motorStatus.canFullLed.update();
