@@ -1,0 +1,56 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=Commande Aspi
+*Date=16:04:21
+*CreatedBy=Fritzing 0.9.4.2019-12-01.CD-498-0-a1ffcea
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;;22.0838;-42.4872;0;Bottom;Jumper4
+2;;;52.5638;-24.7072;0;Bottom;Jumper1
+3;;;51.2938;-17.0872;0;Bottom;Jumper3
+4;;;9.38383;-6.92719;0;Bottom;Hole2
+5;;[THT];70.6339;-35.5773;90;Bottom;STOP
+6;;;9.38383;-83.1272;0;Bottom;Hole1
+7;280;THT;90.6638;-27.2472;-90;Bottom;R1
+8;;;22.0838;-47.5672;0;Bottom;Jumper5
+9;;;45.5091;-8.63634;0;Bottom;TXT2
+10;;;121.144;-6.92719;0;Bottom;Hole3
+11;;;85.5838;-42.4872;0;Bottom;Hole5
+12;;;35.5343;-8.82909;0;Bottom;TXT2
+13;;[THT];70.6339;-48.2773;90;Bottom;START
+14;;5 mm [THT];37.3237;-66.0382;0;Bottom;Speed Medium
+15;;THT;41.1338;-12.0072;-90;Bottom;Power
+16;;[THT];12.2139;-66.0573;90;Bottom;Speed Select
+17;;THT;70.3536;-65.6024;90;Bottom;Speed Adjust
+18;;;42.4038;-62.8072;0;Bottom;Jumper7
+19;;;60.1838;-22.1672;0;Bottom;Jumper8
+20;;[THT];60.4739;-20.3373;90;Bottom;Reset
+21;280;THT;19.5438;-60.2672;-90;Bottom;R5
+22;;5 mm [THT];50.024;-66.0382;0;Bottom;Speed High
+23;;THT;59.3702;-81.6074;-90;Bottom;IR1
+24;280;THT;105.904;-27.2472;-90;Bottom;R2
+25;280;THT;93.2038;-17.0872;0;Bottom;R6
+26;;5 mm [THT];103.364;-17.7782;0;Bottom;Alarm Can Full
+27;;;85.5838;-83.1272;0;Bottom;Hole6
+28;280;THT;32.2438;-60.2672;-90;Bottom;R4
+29;;;5.2044;-47.7533;0;Bottom;TXT3
+30;;;29.6952;-24.7073;90;Bottom;Nano Motor Drive
+31;;;4.96905;-50.6393;0;Bottom;TXT3
+32;;5 mm [THT];95.7437;-33.0182;0;Bottom;OK
+33;;5 mm [THT];24.624;-66.0382;0;Bottom;Speed Low
+34;;;5.01116;-44.911;0;Bottom;TXT3
+35;;5 mm [THT];110.984;-33.0182;0;Bottom;Default
+36;;;52.5638;-27.2472;0;Bottom;Jumper2
+37;;;62.7238;-31.0572;0;Bottom;Jumper6
+38;;;5.16819;-42.3021;0;Bottom;TXT3
+39;;THT;9.38383;-46.2972;0;Bottom;Logique
+40;;;121.144;-42.4872;0;Bottom;Hole4
+41;280;THT;44.9438;-60.2672;-90;Bottom;R3
